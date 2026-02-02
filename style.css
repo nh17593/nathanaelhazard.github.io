@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+}
+
+/****************   Nav Section **********************/
+nav {
+	display: flex;
+  justify-content: space-between;
+  background-color: lightgoldenrodyellow;
+  padding: 10px;
+  border-bottom: 2px solid rgb(228, 206, 151);
+}
+
+/***********************  Footer Section   **************************/
+footer {
+	display: flex;
+  justify-content: center;
+  background-color: lightcyan;
+  padding: 10px;
+  border-top: 2px solid lightblue;
+}
+
+/*********** Splash Page ************************/
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(224, 237, 125);
+}
+
+
+.playwrite-nz-basic-font1 {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header h1 {
+  margin-left: 10px;
+  font: 20px "Playwrite NZ Basic", cursive;
+  color: darkslategray;
+}
+
+header img {
+  border-right: solid 5px lightgray;
+  border-bottom: solid 5px lightgray;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.address {
+  display: flex;
+  margin-left: 10px;
+  font: 16px "Playwrite NZ Basic", cursive;
+}
+
+.tagline {
+  display: flex;
+  margin-left: 10px;
+  font: 16px "Playwrite NZ Basic", cursive;
+  margin-bottom: 10px;
+}
+
+/************* Sections ********************/
+hr {
+  border: 0;
+  height: 2px;
+  background-color: lightgray;
+}
+
+section h3 {
+  margin-left: 10px;
+  font-family: "Playwrite NZ Basic", cursive;
+  font-size: 16px;
+  color: slategray;
+}
+
+section dl {
+  display: grid;
+  grid-template-columns: auto;
+  margin-left: 30px;
+}
+
+section ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: lower-greek;
+  margin-left: 10px;
+}
+
+section a {
+  display: flex;
+  color: orange;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+/**************   Projects   *****************/
+.three-col {
+	display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 10px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .three-col {
+      grid-template-columns: 1fr;
+    }
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+  max-width: 500px; 
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
