@@ -37,7 +37,7 @@ header {
 
 header h1 {
   margin-left: 10px;
-  font: 25px "Playwrite NZ Basic", cursive;
+  font: 35px "Playwrite NZ Basic", cursive;
   color: darkslategray;
 }
 
@@ -71,7 +71,7 @@ hr {
 section h3 {
   margin-left: 10px;
   font-family: "Playwrite NZ Basic", cursive;
-  font-size: 20px;
+  font-size: 25px;
   color: slategray;
 }
 
@@ -159,3 +159,4 @@ textarea {
   box-sizing: border-box;
 
 }
+
