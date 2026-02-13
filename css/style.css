@@ -23,9 +23,11 @@ footer {
 /*********** Splash Page ************************/
 header {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   background-color: rgb(224, 237, 125);
 }
+
 
 
 .playwrite-nz-basic-font1 {
@@ -36,58 +38,128 @@ header {
 }
 
 header h1 {
-  justify-content: center;
-  font: 35px "Playwrite NZ Basic", cursive;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Playwrite NZ Basic", cursive;
   color: darkslategray;
+  margin: 0.5rem 0;
 }
 
 header img {
-  justify-content: center;
   border-right: solid 5px lightgray;
   border-bottom: solid 5px lightgray;
   border-radius: 10px;
-  margin: 10px;
+  display: block;
+  margin: 10px auto;
 }
 
 .address {
-  justify-content: center;
   display: flex;
-  margin-left: 10px;
-  font: 16px "Playwrite NZ Basic", cursive;
+  justify-content: center;
+  align-items: center;
+  margin: 0.25rem 0;
+  font-family: "Playwrite NZ Basic", cursive;
+  font-size: 16px;
+  text-align: center;
 }
 
 .tagline {
   display: flex;
-  margin-left: 10px;
-  font: 16px "Playwrite NZ Basic", cursive;
-  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0.25rem 0 0.5rem;
+  font-family: "Playwrite NZ Basic", cursive;
+  font-size: 16px;
+  text-align: center;
 }
 
 /************* Sections ********************/
 hr {
   border: 0;
   height: 4px;
-  background-color: lightgray;
+  background-color: black; /* keep hr black */
+}
+
+/* Light-green background for address/tagline blocks */
+.address,
+.tagline {
+  background-color: #eef6d6; /* lighter green */
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  max-width: 900px;
+  width: calc(100% - 2rem);
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+/* Very light baby-blue full-width background for content after the hr up to the footer (footer excluded) */
+.baby-blue {
+  background-color: #e8f7ff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 0; /* ensures background covers spacing and prevents margin collapse */
+}
+
+.baby-blue > * {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem; /* give inner content horizontal breathing room */
+  text-align: center;
 }
 
 section h3 {
-  margin-left: 10px;
   font-family: "Playwrite NZ Basic", cursive;
   font-size: 25px;
   color: slategray;
+  text-align: center;
+  margin: 0.5rem 0 0.25rem;
 }
 
 section dl {
   display: grid;
   grid-template-columns: auto;
-  margin-left: 30px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+section dl dt,
+section dl dd {
+  margin: 0.125rem 0;
+  text-align: center;
 }
 
 section ul {
-  display: flex;
-  flex-direction: column;
+  /* keep the list block centered but left-align items for professional spacing */
+  display: block;
   list-style-type: lower-greek;
-  margin-left: 10px;
+  /* use outside markers so browsers reliably render greek glyphs */
+  list-style-position: outside;
+  margin: 0.25rem auto 1rem;
+  padding-left: 1.2rem; /* small left padding so markers sit close to items */
+  max-width: 900px;
+}
+
+section ul li {
+  text-align: center; /* center each list item */
+  margin: 0.125rem 0;
+  display: block;
+}
+
+/* Make sure the list marker is visible and uses a reliable font */
+section ul::marker {
+  font-family: "Times New Roman", serif;
+  font-size: 1em;
+}
+
+/* Also ensure definition lists appear centered and uniform */
+section dl {
+  justify-items: center; /* center grid children */
+}
+section dl dt,
+section dl dd {
+  margin: 0.125rem 0;
+  text-align: center;
 }
 
 section a {
@@ -122,6 +194,12 @@ section a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 15px;
   text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lifts the card up slightly */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Makes the shadow deeper */
+  border-color: #bbb; /* Optional: darkens the border */
 }
 
 /**************   Responsiveness   *****************/
