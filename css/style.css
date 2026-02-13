@@ -36,12 +36,13 @@ header {
 }
 
 header h1 {
-  margin-left: 10px;
+  justify-content: center;
   font: 35px "Playwrite NZ Basic", cursive;
   color: darkslategray;
 }
 
 header img {
+  justify-content: center;
   border-right: solid 5px lightgray;
   border-bottom: solid 5px lightgray;
   border-radius: 10px;
@@ -49,6 +50,7 @@ header img {
 }
 
 .address {
+  justify-content: center;
   display: flex;
   margin-left: 10px;
   font: 16px "Playwrite NZ Basic", cursive;
@@ -159,4 +161,5 @@ textarea {
   box-sizing: border-box;
 
 }
+
 
